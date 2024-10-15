@@ -145,3 +145,34 @@ function alertMe(){
     }
     alert("Button has been clicked")
 }
+
+
+
+
+function clickButton(){
+    console.log("Button has been clicked attribute")
+}
+
+
+
+
+let button = document.getElementById('button')
+
+// with event listeners we dont have the on
+button.addEventListener('click',function(){
+
+    for(let i=0; i<lisExercise.length;i++){
+        // lisExercise[i].style.backgroundColor="blue"
+    
+        if(Number(lisExercise[i].innerHTML) %2 === 0){
+            console.log('even number ' + lisExercise[i].innerHTML)
+            
+        }
+        else if(Number(lisExercise[i].innerHTML) %2 === 1){
+    
+            console.log('number is odd ' + lisExercise[i].innerHTML )
+            lisExercise[i].innerHTML += " is an odd number"
+        }
+    }
+    console.log("Button has been clicked")
+})
